@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Classes</title>
+</head>
+<body>
+    <script>
+// Object
+let mybro = {
+
+name : `KoHtet`,
+age : 10,
+town: `MayMyo`,
+address:function(){console.log(`he live in ${this.town}. `) }
+
+
+
+
+}
+// Classess
+
+class myself {
+    name = `YewinMyat`;
+    age = 19;
+    into() {return `My name is ${this.name}.I am ${this.age}.`};
+
+    //  Access Modifier
+    #gf=`Htke`
+    showGF(){return `My gf name is ${this.#gf}`}
+}
+    //`Classes` are same as `Object`
+    //Difference is we cannot describe Classes in Console
+    //We have to change `Classes` into `OBject`.TO Change ,we have to write that let sth = ```new``` object's name
+    //Then we can describe `Classes` in the same way of `Obj`
+
+//=====================================================================================
+
+
+    //Constructor
+
+   class car{
+constructor(carname,version){
+this.name =  carname //this.name is just like name in class myself
+this.version = version
+console.log(`This is constructor`)
+}
+//prototype method
+//Just like a function in Constructor Class
+get showage (){let currentyear = 2021
+return `This car is ${currentyear - this.version} years old`}
+}
+
+
+// Just Like other Classes 
+// Difference is >>>>>>> let Car = new car(`ford`,2016),We have to write the parameters(`ford,2016`) that we want.
+// let Car = new car(`ford`,2016)
+//Differnce between normal one and this one is >>>> We can change datas.
+//in Normal ones,we set the data permenantly .....like name = `YewinMyat`
+    </script>
+</body>
+</html>

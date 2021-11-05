@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+        .news{columns: 3 250px;
+        width: 80%;
+        margin: 100px auto;
+        }
+        img{width: 100%;}
+        
+        .author{}
+        
+        
+        </style>
+</head>
+<body>
+    <p class="wait">Just Wait You little shit</p>
+<div class="news"></div>
+
+     <script>
+let wait = document.querySelector(`.wait`)
+
+         fetch(`https://newsapi.org/v2/everything?q=tesla&from=2021-08-02&sortBy=publishedAt&apiKey=f795b84051bd45a0bf3bab6b8c75585b`)
+         .then(response => response.json())
+        .then(data => {  
+            wait.innerHTML = ""
+            console.log(data)
+let article = data.articles
+let news = document.querySelector(`.news`)
+
+article.map(function(el,index){
+    
+   console.log(el)
+    
+    news.innerHTML +=`
+    
+    <div class="card">
+        <img src="${el.urlToImage}" alt="">
+<h3 class="title">${el.title}</h3>
+<small class="aurthor">${el.author}</small>
+<p class="content">${el.description}</p>
+<a href="${el.url}">ReadMore</a>
+
+
+</div>
+    
+    
+    `})})
+    .catch(`You are in error`)
+     </script>
+
+
+<!-- Fetch
+fetch like Webapi.
+Difference is we will not copy the data to our computer
+
+ ***Writing Method***
+ fetch(`link`)
+ .then(respone => respone.json()) <<<<< That is very important.If it is not included,data will not be showed
+ .then(data => {}) <<<<****to show the json as data in our documents***
+
+
+json means data from the websites.
+-->
+
+<!-- // IN fetch
+            //*** the command that doesnt relate with fetch will do first.
+
+            // **Example**
+            //   fetch('https://fakestoreapi.com/products/1')
+            // .then(res=>res.json())
+            // .then(json=>console.log(json))
+                // console.log(`cc`)
+
+
+            // above this, *console.log(`cc`) will do *first.It will not wait. So, we can say that the command that doesnt relate with fetch will do first. -->
+</body>
+</html>

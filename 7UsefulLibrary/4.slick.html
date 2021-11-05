@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/BootStrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+
+    <title>Slick</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="slide my-5">
+                    <img src="assets/Nanno.jpg"  class=" img-fluid"  alt="" srcset="">
+                    <img src="assets/n2.jpg" class=" img-fluid" alt="" srcset="">
+                    <img src="assets/N3.jpg" class=" img-fluid" alt="" srcset="">
+                    <img src="assets/LittleNobushi.jpg" class=" img-fluid" alt="" srcset="">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="vendor/Jquery/jquery.js"></script>
+    <script src="vendor/BootStrap/js/bootstrap.js"></script>
+    <script src="vendor/slick/slick.js"></script>
+    <script>
+ $(".slide").slick(
+     {
+        dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+     }
+ )
+//  https://kenwheeler.github.io/slick/
+    </script>
+</body>
+</html>

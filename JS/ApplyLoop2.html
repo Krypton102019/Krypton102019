@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApplyLoop2</title>
+<style>
+tr,td,th{padding: 10px;
+border: 1px solid black;}
+table{border-collapse: collapse;}
+.dark{background-color: black;}
+
+
+
+</style>
+    
+</head>
+<body>
+    <h4>Global Table</h4>
+<table>
+<tbody id="tb">
+
+</tbody>
+
+</table>
+
+<!-- ======================================== -->
+<h4>Country Table</h4>
+<table>
+<thead>
+    <th>No</th>
+    <th>Country</th>
+    <th>Total</th>
+</thead>
+<tbody id="tb2">
+
+
+</tbody>
+
+
+
+
+</table>
+<!-- ========================================== -->
+    <script src="covidapi.js">
+    </script>
+        <script>
+        let global = data.Global; 
+let td = document.getElementById(`tb`)
+let tb2 = document.getElementById(`tb2`)
+
+
+ let country = data.Countries
+ for(x in global){
+
+td.innerHTML += `<tr>
+    <td>${x}</td>
+    <td>${global[x]}</td>
+    
+    
+    </tr>`
+//right >> x
+// left >> sth[x]
+
+ }
+// for in >>>>>>> use in  obj
+
+// =============================================================
+let i = 1;
+for(x of country){
+    i++;
+    tb2.innerHTML += `<tr>
+        <td>${i}</td>
+        <td>${x.Country}</td>
+        <td>${x.TotalConfirmed}</td>
+        
+        </tr>`
+ //x = data twe
+ //x.COuntry = data twe htl ka Country
+ 
+
+
+}
+// for of  >>>>>>> use in array
+country.map(function (el,index) {
+         tb2.innerHTML += `
+            <tr>
+                <td>${index}</td>
+                <td>${el.Country}</td>
+                <td>${el.TotalConfirmed}</td>
+                <td>${el.TotalDeaths}</td>
+            </tr>
+        `;
+    });
+
+// In this case,Country is not a normal array .It is **the array that include the objects****
+// SO we can call ***the objects in the arry that we want*** easily by >>>>> el.Country,el.TotalConfirmed
+// el.Country mean calling **the elements*** from ***the object which name is "Country" in that array**** 
+// For loop, we can write as **x.Country**.In that case,  x means elements
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+    color: var(--secondary);
+}
+/* FOnt */
+@font-face {
+    font-family: "mm";
+    font-weight: normal;
+    src: url("../fonts/Pyidaungsu-1.8.3_Regular.ttf");
+}
+.mm{
+    font-family: "mm";
+}
+@font-face {
+    font-family: "mm";
+    font-weight: bold;
+    src: url("../fonts/Pyidaungsu-1.8.3_Bold.ttf");
+}
+/* to create new font >>>@font-face 
+ font-family: "font name";
+    font-weight: bold,normal;
+    src: url("path name");*/
+
+/* Color */
+:root{
+    --primary:#f63944;
+    --primary-soft:#f11c1c;
+    --secondary:#707070;
+    --secondary-soft:#f2f2f2;
+    --lightColor:#ffffff;
+    --darkColor:#000000;
+    --dark: #a9acb1;
+    --br:5px;
+    --light:#ffffff;
+}
+.divider{
+    background-color:var(--secondary);
+    height:5px ;
+    border-radius: var(--br);
+}
+
+
+.app{
+width: 700px;
+margin: 100px auto;
+}
+/* Head */
+.output{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-container{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+}
+.brand{
+    margin-left: 10px;
+font-size: 30px;
+}
+
+
+
+.result-container{display: flex;
+    align-items: baseline;
+
+
+}
+.pointer{cursor: pointer;}
+.Delete{margin: 0 26px;
+cursor: pointer;}
+.result{
+font-size: 50px;
+}
+
+
+
+
+
+/* Body */
+
+/* Parent */
+.calc{display: flex;
+justify-content: space-between;
+margin-top: 10px;
+}
+/* Child */
+.container{
+   width: 150px;
+}
+/* INput,From,to Options */
+.input,.from,.to{
+width: 100%;
+padding: 5px 10px;
+border-radius: var(--br);
+border: 1px solid var(--secondary);
+}
+.input{text-align: right;}
+.container label{display: inline-block ;
+margin-bottom: 10px;}
+
+.calc-btn{
+width: 100%;
+height: 100%;
+border-radius: var(--br);
+background-color: var(--primary);
+border: 1px solid var(--primary);
+color: var(--lightColor);
+font-size: 20px;
+text-transform: uppercase;
+}
+select:focus,input:focus,button:focus{
+    outline: none;
+}
+.calc-btn:active{
+    background-color: var(--primary-soft);
+    cursor: pointer;
+}
+
+
+/* ================================================ */
+/* Hide Arrow Spiner in INput Type Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* HIde Arrow Spinner In Select */
+select::-ms-expand {	display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+	   select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+/* ==================================================== */
+
+/* HIstory */
+.history {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /* border-collapse: collapse; */
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.history td, .history th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: var(--br);
+}
+.history tr{
+    background-color: var(--secondary-soft);
+}
+/* .history  tr td:last-child{
+    text-align: right;
+}
+.history th:last-child{
+    text-align: right;
+} */
+/*.history tr:nth-child(even){background-color: var(--secondary-soft); }*/
+
+.history tr:hover {background-color: #ddd;}
+
+.history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: var(--lightColor);
+}
+#rs{text-align: center;}
+/* NIght MOde Changer */
+.mode-change{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--dark);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.mode-change .fas{
+    color: var(--light) !important;
+}
+/* 480px */
+@media  screen and (max-width: 480px) {
+    .app{
+    width: 96%;
+margin: 30px auto;}
+    .output{
+    flex-flow: column;
+    align-items: flex-end;
+}
+     .brand-container{width: 100%;}
+      .calc{
+        flex-wrap: wrap;
+      }
+      .container{width: 100%;
+    margin-bottom: 15px;}
+
+      .from-container,.to-container{
+          width: 46%;
+      }
+      .calc-btn{
+          padding:  15px 0;
+      }
+      .input,.from,.to{
+          padding: 15px 10px ;
+      }
+}
+
+
+
+
+

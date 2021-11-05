@@ -1,0 +1,21 @@
+.one {
+  background-color: pink;
+  height: 100px;
+  border: 2px solid black;
+  margin: 100px 50px;
+}
+
+.two {
+  border: 2px solid black;
+  margin: 100px 50px;
+}
+
+.two h1 {
+  color: pink;
+}
+
+.two p {
+  font-size: 50px;
+  color: pink;
+}
+/*# sourceMappingURL=test.css.map */

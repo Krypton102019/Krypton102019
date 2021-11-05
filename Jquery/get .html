@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetSet</title>
+</head>
+<body>
+    
+
+    <p >this is p tag</p>
+    <h1>Get and set</h1>
+    <ul>
+        <li>text()
+        </li>
+        <li>html</li>
+        <li>val</li>
+        <li>attri</li>
+    </ul>
+     
+    <input type="text" id="input">
+    <select name="" id="select"></select>
+    <option value="mm">mm</option>
+    <option value="cn">cn</option>
+    <option value="kr">kr</option>
+
+ <button class="btn">click</button>
+ <button id="btn-attribute">attribute</button>
+
+<script src="jquery.js"></script>
+    <script>
+        $(".btn").on("click",function(){
+            let d = $("p").html("hello123")
+            
+            console.log(d)
+        })
+        document.getElementById(`btn-attribute`). addEventListener("click" , function(){
+         let attr =   $(`p`).attr("style")
+         console.log(attr)
+        })
+    </script>
+</body>
+</html>

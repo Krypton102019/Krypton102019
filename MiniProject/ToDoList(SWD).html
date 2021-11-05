@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList(SWD)</title>
+</head>
+<body>
+    <input type="" id="input">
+    <ul id="list">
+
+    </ul>
+    <script>
+let input = document.getElementById("input")
+let list = document.getElementById("list")
+ 
+let k = Object.keys(localStorage)
+   k.sort() //To be Serial
+//Object.keys(localStorage) >>>>>>> name:,age;email; (things at left sides)
+//Object.values(localStorage) >>>>> Yewin,19,example@gmail.com (things at rigt sides)
+
+let id = 1;
+if(localStorage.length>0){id = eval(k[k.length-1])+1;
+console.log(`Hello12322`)} //if it is not include,old data will be disappeared.......
+// because "id" will only start with 1("id"=1),the new "1" will be there and old "1" will be disppeared
+// So old data will be deleted
+// By adding them, if localStorage.length is greater than 1, "id" will become its + 1
+// This mean when the length of localStorage will be 2, "id" will be start with 3 after refreshing
+
+
+
+
+
+
+// Save
+function save(x){
+   
+   localStorage.setItem(id,x);
+   id++;
+}
+
+
+//addToLists
+function addtoLists(a){
+    console.log(`addToLists`)
+    let li = document.createElement(`LI`)
+   let content = document.createTextNode(a)
+    li.appendChild(content)
+    list.appendChild(li)
+    input.value=""
+}
+
+
+
+// showList
+function showList(){
+  
+   k.map(function(el){
+    addtoLists(localStorage.getItem(el))
+   })
+   //localStorage.getItem() ()<<htl mr key twe htae lite yin values twe por dl
+}
+
+
+// keyup
+document.addEventListener("keyup",function(e){
+    if (e.keyCode==13){
+let note = input.value
+addtoLists(note)
+console.log(note)
+save(note)
+    }
+})
+
+showList()
+
+
+    </script>
+
+<!--1. Normal To do lists ta ku phn ti 
+    2. Save mht dk function taku lote ak htl mr $localStorage.setitem$ so p "id" nk "note" nk ko save
+    3."localStorage" htl ka "key"  ko khwal htote pyit >> let k = Object.keys(localStorage)
+    4. p dok "id" ko "localStorage" 0 htet po yin  eval(k[k.length-1])+1 so p "k yk nout sone length ko 1 paung" foe lote
+    5. k.sort() ka ayay kyi dl serial por ag loe
+    6. p dok "localStoage" htl ka hr twe lists mr por ag function taku phn ti 
+       key twe ko map lote p   addtoLists(localStorage.getItem(el)) htl ko htae
+       localStorage.getItem() ()<<htl mr key twe htae lite yin values twe por dl
+-->
+
+</body>
+</html>

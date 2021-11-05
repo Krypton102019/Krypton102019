@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//promise | then >>resolve | reject >>> catch
+// Use them in paramter in function of Promise
+
+        // let y = new Promise (function (resolve) { function pro() { resolve `this is Promise`
+            
+        // };setTimeout(pro(),3000)
+            
+        // })
+        // // Calling the function that is in the promise
+        // // In that case resolve is in  console.log()
+        // y.then(function (aa) {console.log(aa)
+            
+        // })
+
+        let mypromise2 = new Promise(function (resolve) { function pro2() { resolve `Hello I am  a promise`
+            
+        };setTimeout(pro2(),1000)
+        mypromise2.then (function (bb) { console.log (bb)
+            
+        })
+            
+        })
+    </script>
+</body>
+</html>

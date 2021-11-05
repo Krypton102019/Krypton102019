@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano1</title>
+</head>
+<body>
+<audio controls="">
+<source src="sound/A4.mp3" type="audio/mp3">
+</audio>
+
+<input type="word" id="cords"><button id="save" onclick="saveCords()">save</button>
+
+<button onclick="run('C4')">C4</button>
+<button onclick="run('D4')">D4</button>
+<button onclick="run('E4')">E4</button>
+<button onclick="run('F4')">F4</button>
+<button onclick="run('G4')">G4</button>
+<button onclick="run('A4')">A4</button>
+<button onclick="run('B4')">B4</button>
+<button onclick="run('C5')">C5</button>
+
+<ul id="list">
+
+
+
+</ul>
+
+
+    <script>
+       let list = document.getElementById(`list`)
+        let cord = document.getElementById(`cords`)
+        let pianoMemory = []
+// Play function
+      function run(x){ let a= new Audio(`sound/${x}.mp3`)
+    a.play()
+cord.value += x+`,`
+    }
+//========================================
+
+// Auto Play function
+let m = ["C4","E4","B4","C4","E4","B4","C4","E4","B4","B4","E4","C4"]
+function runMemory(arr,delay=1000){arr.map(function (el,index) { 
+    setTimeout(run,delay,el)
+    delay += 500})
+}
+//========================================================
+ 
+// Save button
+function saveCords() { let input = cord.value
+pianoMemory.push(input)
+cord.value = "";
+list.innerHTML=""
+  // Show in list and Relay
+    pianoMemory.map(function (el,index) { 
+list.innerHTML +=`<li>${el}</li><button id="replay" onclick="replay(${index})">Replay</button>`        
+    })
+}
+
+//=====================================================================
+// // Show keys
+// function showkey(keys) {console.log(`You played ${keys}`)
+    
+// }
+// function showkeyf(delay1=1000) { m.map(function ff(el,index) {
+//     setTimeout(showkey,delay1,el)
+//     delay1 += 500
+// })
+    
+// }
+
+//Replay
+function replay(x) { 
+    let current = pianoMemory[x].split(","); // pianoMemory htl ka akhan ta khan [x] ko/ "," atine split p/ current so dk array htl htae dk ta baw
+    current.pop()
+console.log(current)
+runMemory(current)}
+
+    </script>
+<!-- Autoplay foe function taku phan t -->
+
+<!-- pianoMemory
+(2) ['D4,E4,G4,A4,', 'C4,D4,F4,F4,G4,']
+pianoMemory[1]
+'C4,D4,F4,F4,G4,'
+let current = pianoMemory[1].split(",")
+undefined
+current
+(6) ['C4', 'D4', 'F4', 'F4', 'G4', '']
+current.pop()
+''
+current
+(5) ['C4', 'D4', 'F4', 'F4', 'G4'] -->
+
+
+
+<!--1.taku chin si lote say kyin yin ``setTimeout() or setInterval()`` ko htae 
+   `` delay`` lote lite dae tabor tat yout dl
+    ``loop`` pat lite dl so dr akone ta pyine net htl lote mar
+    ak twt delay fikk foe atwt ``setTimeout() or setInterval()`` ko htae  pay ya dl
+
+    2. run(el) loe m yay ya (run,delay,el) so p yay yan.
+
+    3. p yin delay += 500 so p htae py ya ml
+       ak dar ka ``taku p taku char 5 second si *toe lr mal loe`` meaning ya dl
+       += yae  meaning aya taku htet po lote ml    
+    -->
+
+
+    <!-- HOw to save -->
+    <!--1. pa hta sone "save btn" yk function taku pahn ti 
+        2. input ka hr twe ko pianoMemory htl htae >>>>>>pianoMemory.push(input)
+        3, p yin "pianoMemory" htl ka hr twe ko "map" nk "list" htl htae pyit kwr
+        
+         -->
+    
+    
+    <!-- HOw to reply -->
+    <!--1. pianoMemory htl mr ka ["..,...,...,.."] so p shi dr  
+           ak dr ko ["","","",..] fikk ag lote ka ml
+        2. ak dok function taku phan ti function reply(x){
+            let current = pianoMemory[x],split(",")
+            
+        } -->
+    
+    
+    
+    
+ <!---->
+
+</body>
+</html>

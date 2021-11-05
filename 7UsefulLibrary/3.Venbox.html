@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/venobox/venobox.css">
+    <link rel="stylesheet" href="vendor/BootStrap/css/bootstrap.css">
+
+    <title>VenBox</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="my-3">
+               <a class=" venobox" data-gall="aa" href="assets/n2.jpg">
+<img src="assets/n2.jpg" alt="image alt" class=" img-fluid"/>
+               </a>
+            </div> <div class="my-3">
+                <a class=" venobox" data-gall="aa" href="assets/N3 - Copy.jpg">
+ <img src="assets/N3 - Copy.jpg" alt="image alt" class=" img-fluid"/>
+                </a>
+             </div> <div class="my-3">
+                <a class=" venobox " data-gall="aa" href="assets/Nanno.jpg">
+ <img src="assets/Nanno.jpg" class=" img-fluid" alt="image alt" />
+                </a>
+             </div>
+        </div>
+    </div>
+</div>
+
+<!-- img ka small
+     a ka big -->
+     <!-- "Data-gall" ka "Pic" taku nk taku chg kyin yin -->
+
+
+
+
+    <script src="vendor/Jquery/jquery.js"></script>
+    <script src="vendor/venobox/venobox.js"></script>
+    <script src="vendor/BootStrap/js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function(){
+    $('.venobox').venobox({
+        framewidth : '400px',                            // default: ''
+    frameheight: '300px',                            // default: ''
+    border     : '10px',                             // default: '0'
+    bgcolor    : '#5dff5e',                          // default: '#fff'
+    titleattr  : 'data-title',                       // default: 'title'
+    numeratio  : true,                               // default: false
+    infinigall : true,                               // default: false
+    share      : ['facebook', 'twitter', 'download'] // default: []}); 
+});})
+    </script>
+</body>
+</html>

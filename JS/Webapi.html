@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApI</title>
+</head>
+<body>
+
+<input type="file" id="upload" multiple>
+
+<ul id="list"></ul>
+
+<!-- ========================================================== -->
+<!-- Form -->
+<form action="#" id="form">
+
+
+<label for="username">
+Username    <input type="username" id="username">
+</label>
+
+<label for="password">
+    Password <input type="" id="password">
+</label>
+
+<button type="submit">submit</button>
+</form>
+
+
+<!-- ============================================== -->
+
+
+
+<!-- ***formdata.append()
+Appends a new value onto an existing key inside a FormData object, or adds the key if it does not already exist.
+  There are two versions of this method: a two and a three parameter version:
+
+formData.append(name, value);
+formData.append(name, value, filename);-->
+
+
+
+<!-- 
+ To Display the key/value pairs(Data from FOrms )
+   for(var pair of formData.entries()) {
+   console.log(pair[0]+ ', '+ pair[1]);
+}-->
+
+
+<!-- 
+
+***FormData()
+FormData are like Classes .If we want to describe or want to watch them,``Change`` ``them`` into ``Obj`` first like ``Classes``....
+The FormData() constructor creates a new FormData object.
+Just like Changing the classes into the obj
+let sth = new FormData()
+ -->
+
+
+
+
+
+    <script>
+let username = document.getElementById("username")
+let password = document.getElementById("password")
+
+document.getElementById(`upload`).addEventListener(`change`,function() {
+    let upload = this.files
+    console.log(upload);
+    for(x of upload){ document.getElementById(`list`).innerHTML+= `<li>${x.name}</li>`}
+
+   
+})
+
+// ========================================================
+
+
+document.getElementById("form").addEventListener("submit",function (e) {
+    e.preventDefault();
+    let form = new FormData(this);
+    form.append("username",username.value)
+    form.append("password",password.value)    
+
+    for(var pair of form.entries()) {
+        console.log(pair[0]+ ', '+ pair[1]
+);
+    }
+});
+//==========================================================================
+
+
+  
+    </script>
+</body>
+</html>

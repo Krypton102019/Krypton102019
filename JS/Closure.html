@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+
+</head>
+<body>
+    
+
+<!-- USing the functions in funtions -->
+
+
+
+
+    <script>
+// method 1
+function aa(x,y) {
+    let resut = x+y
+    function aachild(z) { console.log(`this is reult`+ `=` + z)
+        
+    }
+    aachild(resut)}
+
+// In console,
+
+
+aa(1,2)
+
+
+// method2
+
+function bb(x) { let input = `this is second result` + x
+    return function bbchild() { console.log(input)
+        
+    }
+    
+}
+bb(5)()
+
+// Put the second () to activate the second function
+
+    </script>
+</body>
+</html>

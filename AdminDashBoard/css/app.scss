@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;0,600;1,100;1,400&display=swap');
+$primary:#ee8844;
+ $form-control:" @include form()" ;
+  $font-family-sans-serif: 'Monsterrat', sans-serif ;
+  $border-radius:30px;
+  
+// npm install bootstrap@4.6.0
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"

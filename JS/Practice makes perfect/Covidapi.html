@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CovidApi</title>
+    <style>
+td ,th {border: 1px solid black;
+padding: 10px;}
+table{border-collapse: collapse;}
+    </style>
+
+
+</head>
+<body>
+<!-- GlobelTable -->
+  <table>
+<tbody id="tb1"></tbody>
+  </table>
+  <br><br>
+  <!-- Country Table -->
+  <table>
+    <thead>
+      <th>No.</th>
+      <th>Countries</th>
+      <th>TotalConfirmed</th>
+    </thead>
+    <tbody id="tb2"></tbody>
+      </table>
+
+  <script src="covidapi.js"></script>
+  <script>
+let tb1 = document.getElementById(`tb1`)
+let global = data.Global
+
+//<!-- GlobelTable -->
+for(x in global ){tb1.innerHTML += `<tr>
+  <td>${x}</td>
+  <td>${global[x]}</td></tr>`}
+
+// <!-- Country Table -->
+let i = 0;
+let tb2 = document.getElementById(`tb2`)
+let country = data.Countries
+for(x of country){
+  
+  
+  i++
+  tb2.innerHTML +=`<tr>
+  <td>${i}</td>
+  <td>${x.Country}</td>
+  <td>${x.TotalConfirmed}</td>
+  </tr>
+
+  `}
+
+
+
+  </script>
+</body>
+</html>

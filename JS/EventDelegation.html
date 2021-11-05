@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventDelegation</title>
+</head>
+<body>
+    <h4>EventDelegation</h4>
+    <ul id="output">
+<button onclick="showlist()">ShowLists</button>
+    </ul>
+
+
+
+<script>
+ let output = document.getElementById("output");
+    let arr = ["apple","orange","mango","banana","strawberry","lemon"];
+
+    // Create "LI"s
+  function addli (x) {
+    let li = document.createElement(`LI`)
+    let content = document.createTextNode(`${x}`)
+
+    li.appendChild(content)
+    output.appendChild(li)
+    
+}
+// Add "LIs"
+function showlist() {arr.map(function (el) {
+    addli(el)
+})
+    
+}
+
+// ForEach
+// FOr Each is like map() . It is used in when we want to ```add fuction in looping style```
+let li = document.querySelectorAll(`li`)
+
+li.forEach(function (el) {
+    el.addEventListener(`click`,function () { console.log(el.innerHTML)
+        
+    })
+    
+})
+//===============================================================================================
+
+//In above case , we cant click new lists so that we cant capture click fucntion(showlists) to added lists 
+
+// So we have to capture added elements with another method called Event Delegation,
+
+output.addEventListener("click",function (e) { let current = e.target
+    console.log(`${current.innerHTML}`)})
+
+//in that case, we have to capture the outpost(parent element)
+// e mean  ````the contents appeared by some events(click,change,......)```
+// target is to capture the child elements which is under the parent elements...
+
+</script>
+
+
+</body>
+</html>

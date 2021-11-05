@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.1.1-dist/b5/css/bootstrap.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="card my-5">
+                    <div class="card-header">Register Form</div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class=" row">
+                                <!-- Group 1 -->
+                                <div class="col-12 col-md-6">
+                                     <!-- Name/Password -->
+                           <div class="form-group">
+                            <label for="uname">Name</label>
+                            <input type="text" name="username" id="uname" class=" form-control">
+                        </div>
+                        <div class="form-group">
+                         <label for="password">Password</label>
+                         <input type="text" name="password" id="password" class=" form-control">
+                     </div>
+                     <!-- Selector -->
+                       <div class="form-group">
+                           <label for="exampleformSelector">Fruits I like</label>
+                           <select class=" form-control" name="" id="exampleformSelector">
+                                <option value="">Apple</option>
+                                <option value="">Orange</option>
+                                <option value="">Banana</option>
+                                <option value="">Pineapple</option>
+
+                           </select>
+                       </div>
+                         <!--@ Range -->
+                         <div class="form-group">
+                            <label for="rangeExample">ExampleRange</label>
+                            <input type="range" class=" form-control-range" id="rangeExample">
+                        </div>
+                        <!-- Check -->
+                       <div class="form-group">
+                           <label for="" class="d-block"><h3>Gender</h3></label>
+                          <div class="form-check form-check-inline">
+                              <input type="checkbox" class=" form-check-input" value="" id="defaultCheck1">
+                              <label class=" form-check-label" for="defaultCheck">
+                                 Male
+                              </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input type="checkbox" class=" form-check-input" value="" id="check2">
+                              <label for="check2" class=" form-check-label">Female</label>
+                          </div>
+                       </div>
+                                </div>
+                                <!-- Group 2 -->
+                                <div class="col-12 col-md-6">  
+                                   
+                                   <!-- Radio -->
+                                   <div class="form-group">
+                                      <label for="" class="d-block"><h3>Gender</h3></label>
+                                      <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                          <label class="form-check-label" for="flexRadioDefault1">
+                                            Male
+                                          </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                           Female
+                                          </label>
+                                        </div>
+                                  </div>
+                                     <div class="form-group">
+                                         <div class="custom-file">
+                                             <input type="file" class="custom-file-input" id="customfile">
+                                             <label for="customfile" class=" custom-file-label"></label>
+                                         </div></div>
+
+                            </div>
+                           
+                       
+                           </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gallery"></div>
+    <script>
+        let customfile = document.getElementById("customfile")
+        let gallery = document.getElementById("gallery")
+function createImg(x) {
+    let img = new Image()
+    img.src = x
+    gallery.appendChild(img)
+}
+
+
+
+customfile.addEventListener("change",function () { let value = customfile.files
+let reader = new FileReader()
+reader.readAsDataURL(value[1])
+reader.addEventListener("load",function () { createImg(reader.result)  })
+
+
+ })
+
+
+    </script>
+</body>
+</html>
+<!-- Div mr  >>>>>form-group
+     tags twe mr >>>form-controlled 
+
+    Range ka htu char dl >>> class="form-control-range" 
+     Checkbox >>>>form-check so p "div" khan ya dl 1.input type=checkbox / class = "form-check-input" *form-check htl ka input moe "form-check-input"
+                   2.label class = "form-check-label"
+                   nth special pr range so yin "range" checkbox so "check"
+     Radio
+-->

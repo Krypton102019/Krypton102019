@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Piano</title>
+
+</head>
+<body>
+    <input type="text" id="nodesInput">
+    <button id="save" onclick="save()">Save</button>
+<ul id="Records">
+
+</ul>
+ <button onclick="run('C4')">C4</button>
+ <button onclick="run('D4')">D4</button>
+ <button onclick="run('E4')">E4</button>
+ <button onclick="run('F4')">F4</button>
+ <button onclick="run('G4')">G4</button>
+ <button onclick="run('A4')">A4</button>
+ <button onclick="run('B4')">B4</button>
+ <button onclick="run('C4')">C4</button>
+
+ <button onclick="autoplay(Twinkle,1000)">TwinKleTwinkle</button>
+ <script>
+     //Names
+     let nodesInput = document.getElementById(`nodesInput`)
+
+     let Record = document.getElementById(`Records`)
+     let NodeStore = []
+     //Play
+    function run(soundname){
+        let audio = new Audio(`../sound/${soundname}.mp3`)
+        audio.play()
+        nodesInput.value += soundname+`,`
+    }
+     let Twinkle =[`C4`,`C4`,`G4`,`G4`,`A4`,`A4`,`G4`,`F4`,`F4`,`E4`,`E4`,`D4`,`D4`,`C4`,`G4`,`G4`,`F4`,`F4`,`E4`,`E4`,`D4`,`C4`,`C4`,`G4`,`G4`,`A4`,`A4`,`G4`,`F4`,`F4`,`E4`,`E4`,`D4`,`D4`,`C4`]
+//AutoPlay
+     function autoplay(sound,delay){
+        sound.map(function (el) {
+
+            setTimeout(run,delay,el)
+
+            delay += 500
+        })
+}
+
+
+
+function save(){ let nodes = nodesInput.value
+ NodeStore.push(nodes)
+    nodesInput.value = "";
+  Record.innerHTML=""
+    NodeStore.map(function (el,index){
+        Record.innerHTML +=`<li>${el}</li><button onclick="replay(${index})">replay</button>`
+    })
+}
+
+function replay(x){
+         let tempo = window.prompt("Put the tempo")
+    console.log(tempo)
+    let current = NodeStore[x].split(`,`)
+    current.pop()
+    autoplay(current,Number(tempo))
+}
+ </script>
+</body>
+</html>

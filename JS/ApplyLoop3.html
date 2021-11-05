@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApplyLoop3</title>
+<style>
+.news{columns: 3 250px;
+width: 80%;
+margin: 100px auto;
+}
+img{width: 100%;}
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+<div class="news">
+
+
+
+
+</div>
+
+
+<script src="newsapi.js"></script>
+    <script>
+        console.log(data)
+let article = data.articles
+let news = document.querySelector(`.news`)
+
+article.map(function(el,index){
+    
+   
+    
+    news.innerHTML +=`
+    
+    <div class="card">
+        <img src="${el.urlToImage}" alt="">
+<h3 class="title">${el.title}</h3>
+<small class="aurthor">${el.author}</small>
+<p class="content">${el.description}</p>
+<a href="read-more">${el.url}</a>
+
+
+</div>
+    
+    
+    `})
+
+    </script>
+</body>
+</html>

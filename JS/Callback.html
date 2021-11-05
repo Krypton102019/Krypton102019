@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <script>
+function bb(x) {
+    console.log(`result is`+x)
+}
+
+
+function aa(x,y,callback) {
+ let z = x+y
+callback(z)
+}
+// Just Call a function into another functions.....
+
+aa(3,4,bb)
+    </script>
+
+</body>
+</html>

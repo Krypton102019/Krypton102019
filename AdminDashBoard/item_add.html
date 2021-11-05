@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add item</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> <!--0.Main COl
+            1.ROw
+           2.Col
+           3.card,card-body -->
+
+<section class="main container-fluid">
+    <div class="row"> <!--Main Row-->
+
+
+        <!--        Side bar Start              -->
+
+
+
+
+        <!--  (I)SideBar -->
+
+        <div class="col-12   col-lg-3 col-xl-2 vh-100 sidebar   ">
+            <div class="d-flex justify-content-between align-items-center py-2 mt-3   ">
+                <!--1. Brand -->
+                <div class="d-flex align-items-center">
+                   <span class="bg-primary p-2   rounded  mr-2">
+                       <i class="feather-shopping-bag text-white mb-0 h4 "></i>
+                   </span>
+                    <span class=" font-weight-bolder h4 text-primary mb-0">MyShop</span>
+                </div>
+                <!-- 2.Close Sidebar -->
+                <button class=" hide-sidebar-btn btn btn-light d-lg-none">
+                    <i class=" feather-x  text-primary" style="font-size: 2em;"></i>
+                </button>
+            </div>
+            <!-- Side bar menu Start-->
+ <div class="nav-menu">
+    <ul>
+           <li class="menu-item">
+               <a href="dashboard.html" class="menu-item-link ">
+                   <span>
+                       <i class="feather-home"></i>
+                       Dashboard
+                   </span>
+               </a>
+           </li>
+          <li class="menu-spacer"></li>
+
+
+          <li class="menu-title">
+                  <span>Manage Item</span>
+          </li>
+
+
+          <li class="menu-item">
+                  <a href="item_add.html" class=" menu-item-link active">
+                     <span>
+                         <i class="feather-plus-circle"></i>
+                         Add Item
+                  </span>
+                     
+                  </a>
+          </li>
+
+
+          <li class="menu-item">
+                      <a href="item_list.html" class="menu-item-link">
+                      <span>
+                          <i class="feather-list"></i>
+                          Item List
+                      </span>
+          
+                      <span class=" badge badge-pill bg-white shadow-sm p-1">15</span>
+                    </a>
+          </li>
+          <li class="menu-spacer">
+
+          </li>
+
+
+          
+
+    </ul>
+
+  </div>
+ <!-- Side bar menu  End-->
+
+        </div>
+
+
+
+
+        <!--        Side bar END             -->
+        
+
+
+
+
+        <!--(II) Content -->
+
+
+        <div class="col-12   col-lg-9 col-xl-10 vh-100 py-3 content"> <!--Main Col for Content-->
+
+
+
+
+            <!--            Header    Start       -->
+
+
+
+            
+            <!-- 1. Header -->
+
+            <div class="row header mb-4 ">
+                <div class="col-12">
+
+                    <div class="p-2 bg-primary rounded justify-content-between align-items-center d-flex  ">
+                        <!-- sidebar button -->
+                        <button class="show-sidebar-btn btn btn-primary d-lg-none">
+                            <i class=" feather-menu text-light" style="font-size: 2em;"></i>
+                        </button>
+                        <!-- search -->
+                        <form action="" method="POST " class="d-none d-md-block">
+                            <div class=" form-inline">
+                                <input type="text" class="form-control mr-3">
+                                <button class="btn btn-light  ">
+                                    <i class="feather-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/user/avatar1.jpg" class="user-img shadow-sm" alt="">  Krypton
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">LogOut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+          <!--            Header      End     -->
+
+
+            
+<!--                content Area Start                -->
+
+   <!--   Breadcrumb Start              -->
+
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-white mb-4">
+                      <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Item</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Add Item</li>
+                    </ol>
+                  </nav> 
+            </div>
+        </div>
+
+ <!--   Breadcrumb end              -->
+
+
+ <!-- Card Start -->
+
+        <div class="row">
+                <div class="col-12 col-xl-8">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <!-- Label Start -->
+
+
+                            <div class=" d-flex justify-content-between">
+                                <h4 class="mb-6">
+                                     <i class="text-primary feather-plus-circle"></i>
+                                     Add Items
+                                </h4>
+                                <a href="" class="btn btn-outline-primary text-primary">
+                                    <i class=" feather-list"></i>
+                                </a>
+                            </div>
+                 
+
+                            <!-- Label End -->
+
+                         <hr>
+    
+
+                            <!--         Form Start             -->
+                            <form action="" method="POST">
+                                    <div class="row">
+                                  
+                            <!--       First Column    Start  -->
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="photo">
+                                                      Photo Upload </label>
+                                                <i class=" feather-info"   data-container="body" data-toggle="popover" data-placement="top" data-content="Only Support .jpg and .png"></i>
+                                                <input type="file" name="photo" id="photo" class=" form-control p-1" required>
+                                            </div>
+                                         
+                                            <div class="form-group">
+                                                 <label for="name">Item Name</label>
+                                                 <input type="text" id="name" class="form-control">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                 <label for="type">Item Type</label>
+                                                 <select name="type" class="form-control custom-select" id="type">
+                                                    <option value="" selected disabled >Select Item Type</option>
+
+                                                     <option value="">Dry Product</option>
+                                                     <option value="">Wet Product</option>
+                                                 </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="c">Category</label>
+                                                     <select name="c" class="form-control custom-select" id="c">
+                                                           <option value="" selected disabled>Select Category</option>
+                                                     </select>
+                                           </div>
+
+                                           <div class="form-group">
+                                              <label for="sc">Sub-Category</label>
+                                                 <select name="sc" class="form-control custom-select" id="sc">
+                                                    <option value="" selected disabled>Select Sub-Category</option>
+                                                 </select>
+                                            </div>
+
+                                        </div>
+                            <!--       First Column   End  -->
+
+
+                          <!--       Second Column   Start  -->
+
+                                    <div class="col-12 col-md-6"> 
+                                               
+                                            <div class=" row">
+                                                
+                                                <div class="col-6">
+                                                     <label for="q">Item Quantity</label>
+                                                     <input type="text" class="form-control" name="q" id="q">
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="type">Unit</label>
+                                                           <select name="type" class="form-control custom-select" id="type">
+                                                               <option value="">Dry Product</option>
+                                                               <option value="">Wet Product</option>
+                                                           </select>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                    
+                                        <div class="form-group">
+                                            <label for="price">Price</label>
+                                            <input type="text" id="price" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="des">Description</label>
+                                            <textarea type="text" id="des" rows="8" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <!--      Second Column   End  -->
+
+
+                                    <hr>
+                                    <button class="btn btn-primary ">Add Item</button>
+                          
+                               
+
+
+                            </form>
+                             
+
+
+
+
+
+
+                            <!--         Form End                  -->
+                         
+                            
+                         
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+
+
+            
+            <!--           content Area End          -->
+
+
+        </div>
+    </div>
+
+
+
+</section>
+<script src="vendor/jquery.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="js/app.js"></script>
+<script src="vendor/chart_js/Chart.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="vendor/way_point/jquery.waypoints.js"></script>
+<script src="vendor/counter_up/counter_up.js"></script>
+ 
+
+
+<script>
+let Category = ["coffee","book","memory-stick","cards"]
+let subCategory = [
+    {name:"OldTown",category_id:0},
+    {name:"Nestle",category_id:0},
+    {name:"Act of not giving a fuck",category_id:1},
+    {name:"Prince",category_id:1},
+    {name:"Samsung",category_id:2},
+    {name:"Bicycle",category_id:3},
+    {name:"IZO",category_id:3},
+]
+Category.map(function (el,index) {
+    $("#c").append(`<option value="${index}">${el}</option>`)
+    
+})
+
+subCategory.map(function (el,index) {$("#sc").append(`<option value="${index}" data-category="${el.category_id}">${el.name}</option>`)  })
+
+$(`#c`).on("change",function(){
+    console.log($(this).val())
+    let currentCategoryId = $(this).val()
+    $("#sc option").hide()
+    $(`[ data-category=${currentCategoryId} ]`).show() //data-catgory in sc = c.option.value
+})
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

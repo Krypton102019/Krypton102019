@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<!-- ============================================================================================== -->
+
+
+
+    <!-- *Finding HTML Elements -->
+<!-- Method	                                     Description
+document.getElementById(id)	            Find an element by element id
+document.getElementsByTagName(name)	    Find elements by tag name
+document.getElementsByClassName(name)	Find elements by class name -->
+
+<!--https://www.w3schools.com/js/js_htmldom_document.asp-->
+
+
+<!-- *Changing Element -->
+<!-- Property	                                     Description
+element.innerHTML                                   =  new html content	Change the inner HTML of an element
+element.attributename                               = new value	Change the attribute value of an HTML element
+element.style.property                              =  new style	Change the style of an HTML element
+Method	Description
+element.setAttribute("attributename", "value")	             Change the attribute value of an HTML element(mostly used) -->
+<!-- element = Selected Element -->
+
+
+
+
+<!-- *Adding and Deleting Elements
+Method	                                   Description
+document.createElement(element)	       Create an HTML element
+document.createTextNode()              Create Content(texts)
+document.removeChild(element)	       Remove an HTML element
+document.appendChild(element)	       Add an HTML element
+document.replaceChild(new, old)    	   Replace an HTML element
+document.write(text)	               Write into the HTML output stream -->
+
+<!-- Events
+https://www.w3schools.com/js/js_htmldom_events.asp -->
+<!-- ================================================================================================ -->
+
+<!-- Nodes -->
+<!-- <html>
+
+  <head>
+    <title>DOM Tutorial</title>
+  </head>
+
+  <body>
+    <h1>DOM Lesson one</h1>
+    <p>Hello world!</p>
+  </body>
+
+</html> -->
+
+<!-- from above thing  -->
+
+<!-- <html> is the root node
+<html> has no parents
+<html> is the parent of <head> and <body>
+<head> is the first child of <html>
+<body> is the last child of <html>
+and:
+
+<head>             has one child: <title>
+<title>            has one child (a text node): "DOM Tutorial"
+<body>             has two children: <h1> and <p>
+<h1>               has one child: "DOM Lesson one"
+<p>                has one child: "Hello world!"
+<h1> and <p>       are siblings -->
+
+<body>
+    <!-- Changing Attributes -->
+    <img src="assets/n2.jpg" alt="">
+
+    <!-- Events(mouse Events) -->
+    <div onmouseover="mOver()" onmouseout="mOut()" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+
+<!-- Events(onchange and onclick) -->
+<label for="name">Type your name </label>
+<input type="text" id="name" onchange="enter()"><button onclick="click()">Done</button>
+<div class="answer"></div>
+
+
+   <script>
+
+// document.querySelectorAll(`img`).forEach(function(el,index){el.src=`assets/Nanno.jpg`})
+
+// =========================================================================================================
+// *Changing Attribute
+
+
+
+// To change the value of an HTML attribute, use this syntax:
+// document.getElementById(id).attributename = new value
+// element.setAttribute("attribute", "value")
+
+document.querySelector(`img`).src = `assets/Nanno.jpg`
+
+
+
+
+// *Events
+// Onmouseover and Onmouseout
+
+function mOver() {
+ document.querySelector(`div`).innerHTML = "Thank You"
+}
+
+function mOut() {
+ document.querySelector(`div`).innerHTML = "Mouse Over Me"
+}
+//  onmousedown, onmouseup and onclick Events
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+
+// onclick and onchange 
+
+// onchange
+let input = document.querySelector(`input`)
+let i = 0;
+function enter(){
+    i++;
+    document.querySelector(`.answer`).innerHTML += `<p class="text${i}">${input.value}</p>`}
+//onclick
+function click() {document.querySelector(`.answer`).innerHTML += `<p class="text${i}">${input.value}</p>`}
+
+
+
+    </script>
+</body>
+</html>

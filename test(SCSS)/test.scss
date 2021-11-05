@@ -1,0 +1,35 @@
+$primaryColor:pink;
+@mixin aa {
+    border: 2px solid black;
+    margin: 100px 50px;
+}
+@mixin bb($x) {
+    font-size: $x;
+
+}
+.one{
+    background-color:$primaryColor;
+    height: 100px;
+    @include aa();
+    
+}
+.two{
+    @include aa();
+    h1{
+        color: $primaryColor;
+    }
+    p{@include bb(50px);
+        color: $primaryColor;
+    }
+}
+// npm install bootstrap@4.6.0
+// Sass @mixin and @include
+
+// @mixin
+// mixin ka phan t dr
+
+//@include name
+// include ka mixin mr phan t htr dr ko yu 3 dr
+
+// thu ka css nk js 2 khu paung htr talo pl kwr
+// @mixin bb ka lo custom htae loe ya dl

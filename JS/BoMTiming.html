@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BomTiming</title>
+</head>
+<body>
+    <h4>ချိန်ကိုက်ဗုန်း</h4>
+<ul>
+    <li>setTimeout(function, milliseconds)</li>
+    <li>clearTimeout(function)</li>
+</ul>
+<h4>အချိန်မှန်</h4>
+<ul id="ul2">
+    <li>setInterval(function, milliseconds)</li>
+    <li>clearInterval(function)</li>
+</ul>
+
+
+
+
+    <script>
+
+function bom () {console.log(`Hello123,This is timing`)}
+
+
+let bom23 = function bom2() { console.log(`This is no 2`)
+    
+}
+ setTimeout(bom23,3000)
+
+// Method
+// 1.Bulid Functions first.
+// 2. Then put this function into setTimeout(),setInterval(),.........
+ 
+// setTimeout
+
+// It is just like a timer bomb,
+// We set time to do function or appear the things
+// if we want to do a function after 3s, we have to write that setTimeout(function's name,3000)
+// So,that function will do after 3 mins 
+//  writing method is >>>>>>>>>>  setTimeout (function'name, time )
+
+//======================================================================================
+
+
+//setInterval()
+
+// Just like setTimeout, it will do the function at the time we set
+//Difference is It will never end and will do regularly every the time we set
+//  writing method is >>>>>>>>>>  setTimeout (function'name, time )
+
+//======================================================================================
+
+
+
+//clearInterval or clearInterval 
+// To execute or stop the ```setInterval() and setTimeout()```
+//  writing method is >>>>>>>>>>  clearTimeout (***setInterval'value888, time )
+
+//Example 
+function test() {
+  let li = document.createElement(`LI`) 
+  let ul2 = document.getElementById(`ul2`)
+  let content = document.createTextNode(`Hello123`)
+li.appendChild(content)
+ul2.appendChild(li)}
+
+let testing = setInterval(test,1000)
+//to Clear Above INterval ,
+clearInterval(testing,5000)
+
+
+
+//=================================================================================
+
+
+
+
+// *******Note*********
+////better way to write this method is that we have to Let some values 
+ //SO we can stop or execute the timeout and interval easily
+
+
+    </script>
+</body>
+</html>

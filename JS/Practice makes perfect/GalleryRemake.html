@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalleryRemake</title>
+</head>
+<body>
+    <input type="file" id="upload">
+    <div id='Gallery'></div>
+
+
+     <script>
+
+let gallery = document.getElementById(`Gallery`)
+let upload = document.getElementById(`upload`)
+// 2.Add to Gallery
+function addtoGallery (a){let img = new Image()
+img.src = a
+img.classList = `gallery-img`
+gallery.appendChild(img)
+}
+
+
+
+       // 1.Upload file 
+         upload.addEventListener("change",function(){let photo = upload.files
+       for(i=0;i<=photo.length;i++){
+            const reader = new FileReader()
+            reader.readAsDataURL(photo[i])
+reader.addEventListener("load",function(){
+console.log(reader.result)
+addtoGallery(reader.result)
+
+
+})
+
+         }})
+     </script>
+</body>
+</html>

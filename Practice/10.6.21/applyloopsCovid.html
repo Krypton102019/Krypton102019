@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="`en`">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CovidApi</title>
+    <link rel="stylesheet" href="../covidapi.js">
+</head>
+<body>
+<!--Global-->
+<div class="">
+    <table class="Global-Table">
+           <thead>
+           <th>
+           <td>Cases</td>
+           <td>Numbers</td>
+           </th>
+           </thead>
+              <tbody id="tb">
+
+              </tbody>
+    </table>
+
+
+</div>
+<!--Global-->
+<br><br>
+<!--Country-->
+<table class="Country-table">
+    <thead>
+    <th>No.</th>
+    <th>Country</th>
+    <th>NewConfirmed</th>
+
+    </thead>
+    <tbody id="tb2">
+
+    </tbody>
+</table>
+<!--Country-->
+
+<script src="../covidapi.js"></script>
+<script>
+
+
+let tb = document.getElementById(`tb`)
+let global = data.Global
+let countries = data.Countries
+let tb2 = document.getElementById(`tb2`)
+let i = 0;
+//Global
+for(x in global){
+    tb.innerHTML += `<tr>
+<td>${x}</td>
+<td>${global[x]}</td> 
+
+</tr>`
+}
+//Country
+
+for(x of countries){ i++;
+    tb2.innerHTML +=`<tr>
+<td>${i}</td>
+<td>${x.Country}</td>
+<td>${x.TotalConfirmed}</td>
+<td>${x.TotalDeaths}</td>
+</tr>`
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

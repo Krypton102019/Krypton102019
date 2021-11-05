@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+.card-body{width: 100%;
+    border: none;
+    margin-left: 0px
+;
+    border-radius: 12px
+;
+    background: wheat;
+    position: absolute;
+    top: 78px
+;}
+.card-header{
+    padding: 31px
+;}
+
+
+    </style>
+</head>
+<body>
+
+<div class=" container">
+    <div class=" row py-5">
+        <div class=" col-12 col-md-5">
+    
+            <div class="card border-0">
+                 <div class="card-header  shadow rounded-4 form-inline">
+                    
+                        <input class="form-inline" id="input" type="text">
+                        <button class="btn ml-3 btn-primary" id="add-button">Add</button>
+                    
+                 </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <ul id="lists">
+                           <li>WorkOut</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+let addButton = document.getElementById(`add-button`)
+let lists =document.getElementById(`lists`)
+let input = document.getElementById(`input`)
+
+let  k = Object.keys(localStorage)
+let id = 1;
+if(localStorage.length>0){ id = eval(k [k .length-1])+1}
+
+k.sort()
+function createLI(a){
+    let Li = document.createElement(`li`)
+    let text = document.createTextNode(`${a}`)
+    Li.appendChild(text)
+    lists.appendChild(Li)
+
+}
+
+function showLists(){
+    key.map(function (el) {
+        createLI(localStorage.getItem(el))
+    })
+}
+function save(y){
+    localStorage.setItem(id,y)
+    id++;
+}
+addButton.onclick = function () {
+     createLI(input.value)
+    save(input.value)
+    input.value = ""
+}
+
+</script>
+</body>
+</html>

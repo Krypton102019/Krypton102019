@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuerrySelector</title>
+    <style>
+        #hide{cursor: pointer;}
+        .hideClass{cursor: pointer;}
+        
+    </style>
+</head>
+<body>
+    <h1 id="hide">Hide Me</h1>
+    <h2 class="hideClass">HideThisClass</h2>
+    <button class="show-btn">show</button>
+    <button class="hide-btn">hide</button>
+    <button class="toggle-btn">Toggle</button>
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+//  Selector.action(function(){secondSelector.action})
+
+        // Hide
+
+$("#hide").click(function(){$(this).slideUp()})
+$(".hideClass").dblclick(function(){$(this).hide(500)})
+// Just like JS Selectors id="#",class ="."
+// HIdebtn
+ $(".hide-btn").click(function(){
+     $("#hide").fadeOut(1000)
+ })
+// functions other than show are slideup,fideOut,.....
+// ===================================================================
+
+
+//Show
+
+$(".show-btn").click(function(){
+    $("#hide").fadeIn(1000)})
+
+    // Toggle
+$(".toggle-btn").click(function(){
+    $("#hide").fadeToggle(2000)
+})
+
+    </script>
+</body>
+</html>

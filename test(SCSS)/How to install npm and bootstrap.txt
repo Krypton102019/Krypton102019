@@ -1,0 +1,11 @@
+npm init -y
+npm install bootstrap@4.6.0
+
+
+/*Codes For GitBash*/
+
+   Description                    Codes
+
+1.To Create Folder    >>>      $mkdir name
+2.To create File      >>>      touch name
+3.To enter the folder >>>      cd foldername

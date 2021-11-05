@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loopSAMPLe</title>
+    <style>
+
+tr,td{width: 50px;
+height: 50px;
+border: 1px solid black;}
+
+    </style>
+</head>
+<body>
+    <table>
+    <tbody id="tbody"></tbody>
+</table>
+
+    <script>
+    // // for(let i=1;i<=5;i++){console.log(i)}
+        // for(let i=1;i<=3;i++){let star = "";
+        //     for(let x=1;x<=i;i++){star += "*"}console.log(star)
+        // }
+        
+        let tbody = document.getElementById(`tbody`)
+        
+        for(i = 1; i<=8;i++){ let td = `<td></td>`
+            for(x=1;x<=8;x++){td +=`<td></td>`}
+            
+            tbody.innerHTML += `<tr>${td}</tr>`}
+        
+        
+            // for(i = 1; i<=8;i++){ 
+            // for(x=1;x<=8;x++){td +=`<td></td>`}
+            
+            // tbody.innerHTML += `<tr>${td}</tr>`}
+        </script>
+</body>
+</html>
+   
+
+

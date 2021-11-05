@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Property</title>
+</head>
+
+
+
+<style>
+
+.obj{background-color: cornflowerblue;
+     height: 200px;
+    width: 200px;
+    border-radius: 111px;
+animation-name: movingObj;
+animation-direction: alternate;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-delay: 1s;
+}
+
+
+@keyframes movingObj {
+0%{background: cornflowerblue}
+25%{background: turquoise;}
+50%{background: brown}
+75%{transform: translateY(80px)}
+100%{transform: translate(100px,500px)}}
+</style>
+
+
+<body>
+<div class="obj"></div>
+ 
+<!-- Animation -->
+<!-- @keyframe -->
+<!-- If u wnat to create animation,you must create @keyframe{} firstly.
+    in @keyframe, there are two ways that set ````starting point and ending point``` >>>>> 1. ```from,to``` / that will be short animation, use if we want to happen only ````two things ```
+                                                                                     >>>>> 2. ```0%,25%,50%,75%,100% ```/ that will be long, ues if want to happen only `````more than two things ````                                                                    
+
+
+-->
+<!-- animation-name: movingObj;                 >>>>> animation's name       / The name must be @keyframe's name
+     animation-direction: alternate;            >>>>> animation's direction / alternate(comeback to starting point),alternate-reverse(moving into reverse direction)
+     animation-duration: 3s;                    >>>>> animation's duration / 1s, 2s,...........
+     animation-iteration-count: infinite;       >>>>> animation's count   / 1,2,3,infinite, / if u set ``infinite``, ur animation will ``never stop``.....if u set 1, you animation will do once 
+     animation-delay: 3s;                       >>>>>  animation's delay              --> 
+
+
+<!-- animation-timing-function: linear;
+animation-timing-function: ease-in-out ;
+animation-timing-function: steps(5,end); 
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function-->
+
+
+</body>
+</html>

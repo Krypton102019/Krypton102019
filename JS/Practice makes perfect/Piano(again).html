@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PianoRemake</title>
+</head>
+<body>
+    <button onclick="run('C4')">C4</button>
+    <button onclick="run('D4')">D4</button>
+    <button onclick="run('E4')">E4</button>
+    <button onclick="run('F4')">F4</button>
+    <button onclick="run('G4')">G4</button>
+    <button onclick="run('A4')">A4</button>
+    <button onclick="run('B4')">B4</button>
+    <button onclick="run('C5')">C5</button>
+
+    <button onclick="Autoplay(key)">Autoplay</button>
+
+    <input type="text" id="cords" > <button onclick="save()">Save</button>
+
+<ul id="list"></ul>
+
+<script>
+    let cords =document.getElementById(`cords`)
+
+    //play
+function run(audioFileName){ let audio = new Audio(`sound/${audioFileName}.mp3`)
+audio.play()
+cords.value += audioFileName+`,` 
+
+}
+//Autoplay
+let key = [`A4`,`A4`,`B4`,`A4`,`D4`]
+function Autoplay (array,delay = 2000){ array.map(function(el){
+    setTimeout(run,delay,el)
+    delay+= 500
+    console.log(`You played key arry`)
+})}
+
+//Save
+
+let pianoMemory = []
+function save (){
+    pianoMemory.push(cords.value)
+    cords.value = ""
+ list.innerHTML = ``
+  console.log(pianoMemory)
+showlists()
+cords.value = ""
+
+
+}
+
+let list = document.getElementById(`list`)
+// Showlist
+function showlists(){ pianoMemory.map(function(el,index){list.innerHTML += `<li>${el}</li><button id="replay" onclick="Replay(${index})">Replay</button>`
+    
+})}
+   
+let replay = document.getElementById(`replay`)
+
+function Replay(x){
+    
+
+let current = pianoMemory[x].split(",");
+    current.pop()
+console.log(current)
+Autoplay(current)
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

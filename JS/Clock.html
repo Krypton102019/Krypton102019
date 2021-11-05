@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Clock</title>
+</head>
+<body>
+
+
+<p id="clock"></p>
+
+<button id="stop">Yamete Kudasai</button>
+
+
+    <script>
+        //Clock
+let clock = document.getElementById(`clock`)
+function time() { 
+    let d = new Date();
+    clock.innerHTML= `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+    
+}
+let run = setInterval (time,) 
+
+// Stop Btn
+
+
+let Stop = document.getElementById(`stop`)
+Stop.addEventListener(`click`,function() {
+    clearInterval(run)
+    
+})
+
+    </script>
+</body>
+</html>

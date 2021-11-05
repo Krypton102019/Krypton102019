@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Property</title>
+
+<style>
+.paragraph{columns: 3;
+   
+    column-rule: 3px solid darkkhaki;
+    column-width: 121px;}
+
+
+.full{ column-span: all;}
+
+.gallery{columns: 3 ;}
+.images{width: 100%;}
+
+
+</style>
+</head>
+<body>
+
+<!-- Test With Paragraph -->
+
+    <h1>Column Property (Paragraph)</h1>
+    <div class="paragraph">
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p class="full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat odio, fuga dicta iure rem optio. Nisi ex reprehenderit eius architecto fugit deserunt, libero placeat, quam quis dolore ullam vero.</p>
+
+</div>
+
+<!-- Column Property -->
+
+<!-- This is used when we want to divide the elements into the columns -->
+<!-- The column Propety are
+
+column-width >>>>>>>>	Defines ```the minimum *width for each column```                 eg.column-width: 1px,.......
+column-count >>>>>>>>	Defines ```the maximum *number of columns```                     eg column-count: 1,2,3,........
+column-span  >>>>>>>>   ```specifies how many columns an element should span across.```  eg column-span: full
+column-ruler >>>>>>>>   ```Draw``` the lines between Column                              eg column-ruler: 1px(width) solid(types) black(color)[Like ``borders``]
+column-gap   >>>>>>>>   ```Defines the *spaces between the columns````
+
+-->
+
+</body>
+</html>

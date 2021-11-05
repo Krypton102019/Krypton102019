@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Easy Ways to Use Component</title>
+    <link rel="stylesheet" href="bootstrap-5.1.1-dist/b5/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+</head>
+<body>
+    <h1>Things That we need to absorb and remember</h1>
+    <ol class="list-group w-25 p-3 ">
+<a href="#button" class="list-group-item list-group-item-action">Button</a>
+<a href="#Alert" class="list-group-item list-group-item-action">Alert</a>      
+<a href="#list" class="list-group-item list-group-item-action">Lists</a>      
+<a href="#badges" class="list-group-item list-group-item-action">Badges</a>      
+
+    </ol>
+    <!-- Button -->
+    <div class="container" id="button">
+        <div class="row">
+            <div class="col-12">
+                <div class="my-5">
+                    <button class="btn  btn-sm btn-danger">Button</button>
+                    <button class="btn btn-secondary">Button</button>
+                    <button class="btn btn-warning btn-lg">Button</button>
+                </div>
+                <div class="my-5">
+                    <button class="btn btn-primary fas fa-download disabled">Disable</button>
+                    <button class="btn download-btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Notes -->
+    <!-- 1.Sizing - btn btn-sm,lg,md
+         2.Color  - btn btn-primary,warning,success,dark,.......
+         3.Disable,Active - active,disabled so p nout sone mr htae py ya ml 
+                           " bold" lote dr yal "fade" dr yal tu tu pl -->
+    <!-- ======================================================================================================================================================================================================================================= -->
+
+    <!-- Alert -->
+<div class="container" id="Alert">
+ <div class="row">
+     <!-- Color -->
+    <div class="col-12">
+        <div class="alert alert-success">  
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officia nobis quod quos, amet aspernatur, perspiciatis odit perferendis possimus dolorem eaque eum ratione commodi exercitationem reprehenderit, facere quae sint alias?
+        </div>
+        <!-- link -->
+        <div class="alert alert-warning">
+            A simple primary alert with <a href="#" class="alert alert-link">Link</a>Click it
+        </div>
+        <!-- Icon -->
+         <div class="alert alert-danger">
+             <i class="fas fa-warning"></i>
+            Icon Error
+         </div>
+         <!-- button -->
+         <div class="alert alert-danger alert-dismissible fade show" role="alert">
+             Error 404
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+    </div>
+ </div>
+</div>
+<!-- NOtes -->
+<!--1.color - alert alert-success/warning/danger/...
+    2.link - <a href="#" class="alert alert-link"> class mr alert alert-link so p htae py ya mr
+    3.button -         -->
+
+<!-- =================================================================================================================== -->
+
+<!-- List -->
+<div class="container" id="list">
+    <div class="row col-12 my-5">
+        <!-- Normal Lists -->
+        <ul class="list-group">
+<li class="list-group-item">List 1</li>
+<li class="list-group-item">List 2</li>
+<li class="list-group-item">List 3</li>
+         </ul>
+         <!-- Link lists -->
+<div class="list-group my-5">
+<a href="#" class="list-group-item list-group-item-action">list A</a>
+<a href="#" class=" list-group-item list-group-item-action">List B</a>
+<a href="#" class="list-group-item list-group-item-action">List C</a>
+
+</div>
+
+    </div>
+</div>
+
+<!-- NOte -->
+<!--  1.Normal Lists =>>>> "ul"mr kya "list-group"////// "li" mr "list-group-item" 
+      2.link lists   =>>>> "ul"mr kya "list-group"////// "li" mr "list-group-item-action" action ta lone po dl "ul" kya dok atu tu pl-->
+
+<!-- ============================================================================================================================== -->
+
+<!--Badges  -->
+<div class="container" id="badges">
+<div class="row">
+    <p>
+        Home <span class=" badge bg-danger">3</span>
+    </p>
+    <div class="bg-danger  p-1"></div>
+</div>
+</div>
+
+<!-- Notes -->
+<!-- badge bg-..... nth special-->
+<!-- =========================================================================================================== -->
+<!-- =========================================================================================================== -->
+
+
+<!-- Spinner -->
+<!-- In spinner Dont think too much Just Copy Pastes -->
+<div class="container my-5">
+  <div class="row">
+    <h4>  Normal Circle Spinner Loading</h4>
+    <!-- color change chin yin text-black,primary sa ta fint win change naing dl -->
+
+        <div class="spinner-border text-black" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+
+          <h4>Growing spinner</h4>
+<!-- apor ka lo pl text-primary so p change yone pl -->
+<div class="spinner-grow text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  
+    </div>
+</div>
+<div class="container">
+    <div class="col-1">
+
+        <h4>ButtonSpinner</h4>
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    <span class="sr-only">Loading...</span>
+  </button>
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Loading...
+  </button>
+    </div>
+</div>
+<!-- Notes -->
+<!-- ==================================================================================================== -->
+<!-- Breadcrumb -->
+<div class="container my-5">
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+    </div>
+</div>
+</body>
+</html>

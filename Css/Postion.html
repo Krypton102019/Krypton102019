@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postion</title>
+<style>
+
+/* Postion Fixed */
+.red{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 100px;
+    z-index: 3;}
+/* Postion: Absolute */
+    .green{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+}
+/* Postion Relative */
+.yellow{background-color: yellow;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 217px;
+}
+
+/* Postion Sticky */
+.sticky{
+    position: sticky;
+    top: 0px;
+    background-color: yellow;
+    
+}
+
+</style>
+
+
+
+</head>
+<body>
+<!-- Postions -->
+<!-- The Postions that we must know are -->
+<!-- 1. postion: static     >>>>>>>>     orignial postion ...Nothing changes
+     2. postion: relative   >>>>>>>>     You can ```move``` the Elements by using these>>>>>>>> top,bottom,right,left
+     3. postion: fixed      >>>>>>>>     Element is in the ````fixed postion```` on Chrome
+     4. postion: absolute   >>>>>>>>     Element will be ```above any other elements on the document````
+     5. postion: sticky     >>>>>>>>     This is ````same as fixed```
+
+Note : Except static, others can also be moved by using these >>>>>>>> top,bottom,right,left
+
+    -->
+
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="yellow"></div>
+
+    
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ad odit aut rerum, necessitatibus quasi impedit laboriosam earum minus recusandae temporibus accusamus sequi ratione ipsum ullam similique enim labore veniam!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ad odit aut rerum, necessitatibus quasi impedit laboriosam earum minus recusandae temporibus accusamus sequi ratione ipsum ullam similique enim labore veniam!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ad odit aut rerum, necessitatibus quasi impedit laboriosam earum minus recusandae temporibus accusamus sequi ratione ipsum ullam similique enim labore veniam!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ad odit aut rerum, necessitatibus quasi impedit laboriosam earum minus recusandae temporibus accusamus sequi ratione ipsum ullam similique enim labore veniam!
+        <div class="sticky">Hello I am sticky</div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ad odit aut rerum, necessitatibus quasi impedit laboriosam earum minus recusandae temporibus accusamus sequi ratione ipsum ullam similique enim labore veniam!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ad odit aut rerum, necessitatibus quasi impedit laboriosam earum minus recusandae temporibus accusamus sequi ratione ipsum ullam similique enim labore veniam!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ad odit aut rerum, necessitatibus quasi impedit laboriosam earum minus recusandae temporibus accusamus sequi ratione ipsum ullam similique enim labore veniam!
+
+        
+
+    
+
+</body>
+</html>

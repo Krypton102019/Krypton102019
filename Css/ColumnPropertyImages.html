@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.gallery{columns: 3;
+    column-gap: 23px;}
+
+
+.images{width: 100%; /* *****Important Part**** */
+    margin: 5px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 83px;}
+
+@media screen and (max-width: 480px){
+    .gallery{columns: 3;
+    column-gap: 23px;
+column-width: 150px;}} 
+    
+.images:hover{filter: contrast(150%);}
+
+
+</style>
+<body>
+    <h1>Column Property (Images)</h1>
+
+<div class="gallery">
+<img  class="images" src="assets/Background.jpg" alt="" srcset="">
+<img class="images" src="assets/depositphotos_55447983-stock-photo-abstract-light-blue-background.jpg" alt="" srcset="" >
+<img class="images" src="assets/istockphoto-1208534790-612x612.jpg" alt="" srcset="" >
+<img class="images" src="assets/istockphoto-1208534912-612x612.jpg" alt="" srcset="" >
+<img class="images" src="assets/istockphoto-920350822-612x612.jpg" alt="" srcset="" >
+<img class="images" src="assets/LittleNobushi.jpg" alt="" srcset="">
+<img class="images" src="assets/5cf2660af5f4214def7166dc7a7c8062.jpg" alt="" srcset="" >
+</div>
+
+<!-- Column Property -->
+
+<!-- This is used when we want to divide the elements into the columns -->
+<!-- The column Propety are
+
+column-width >>>>>>>>	Defines ```the minimum *width for each column```                 eg.column-width: 1px,.......
+column-count >>>>>>>>	Defines ```the maximum *number of columns```                     eg column-count: 1,2,3,........
+column-span  >>>>>>>>   ```specifies how many columns an element should span across.```  eg column-span: full
+column-ruler >>>>>>>>   ```Draw``` the lines between Column                              eg column-ruler: 1px(width) solid(types) black(color)[Like ``borders``]
+column-gap   >>>>>>>>   ```Defines the *spaces between the columns````
+
+-->
+</body>
+</html>

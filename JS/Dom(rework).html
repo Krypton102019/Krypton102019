@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomNode(Rework)</title>
+</head>
+<body>
+    <input type="text" id="textbox">
+    <button onclick="addlist()">add</button>
+<ul id="Lists">
+<li>Hello123</li>
+
+
+</ul>
+<script>
+
+let Lists = document.getElementById(`Lists`)
+let input = document.getElementById(`textbox`)
+
+let InputValue = input.value
+
+function addlist(){
+Lists.innerHTML += showlists(input.value) 
+
+}
+//  `<li>${input.value}</li>`
+
+function showlists(text){var li = document.createElement(`LI`);
+let content = document.createTextNode(text);
+let buttonDel = document.createElement(`button`);
+let buttonEdit = document.createElement(`button`)
+buttonDel.innerHTML = `Delete`
+buttonEdit.innerHTML = `Edit`
+li.appendChild(content)
+li.classList = `kyawgyi`
+
+li.appendChild(buttonEdit)
+li.appendChild(buttonDel)
+
+Lists.appendChild(li)
+console.log(Hello)
+}
+
+// To put class in >>>>>>>>document.createElement(`sth`).classList
+    </script>
+</body>
+</html>

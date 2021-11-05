@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Proper</title>
+    <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 vh-100">
+                <p class="w-50 my-5">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe rerum excepturi facere. Ipsa obcaecati aspernatur odio. Cupiditate repudiandae voluptates, asperiores aspernatur ipsam perspiciatis assumenda itaque dolores sunt sapiente. Non, fugiat.
+                </p>
+                <!-- ToolLips -->
+                <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    Tooltip on top
+                  </button>
+                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+                    Tooltip with HTML
+                  </button>
+                  <!-- Popover -->
+                  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="MingalarparShin">
+                    Popover on top
+                  </button>
+                  <br>
+                  <br>
+                  <!-- DropDown -->
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="jquery.js"></script>
+    <script src="bootstrap-5.1.1-dist/js/bootstrap.bundle.js"></script>
+    <script>
+        $(function () {
+  $('[data-toggle="popover"]').popover({trigger:'focus'})
+})
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+    </script>
+</body>
+</html>

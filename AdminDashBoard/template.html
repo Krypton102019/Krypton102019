@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> <!--0.Main COl
+            1.ROw
+           2.Col
+           3.card,card-body -->
+
+<section class="main container-fluid">
+    <div class="row"> <!--Main Row-->
+
+
+        <!--        Side bar Start              -->
+
+
+
+
+        <!--  (I)SideBar -->
+        <div class="col-12   col-lg-3 col-xl-2 vh-100 sidebar   ">
+            <div class="d-flex justify-content-between align-items-center py-2 mt-3   ">
+                <!--1. Brand -->
+                <div class="d-flex align-items-center">
+                   <span class="bg-primary p-2   rounded  mr-2">
+                       <i class="feather-shopping-bag text-white mb-0 h4 "></i>
+                   </span>
+                    <span class=" font-weight-bolder h4 text-primary mb-0">MyShop</span>
+                </div>
+                <!-- 2.Close Sidebar -->
+                <button class=" hide-sidebar-btn btn btn-light d-lg-none">
+                    <i class=" feather-x  text-primary" style="font-size: 2em;"></i>
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <!--        Side bar END             -->
+        
+
+
+
+
+        <!--(II) Content -->
+
+
+        <div class="col-12   col-lg-9 col-xl-10 vh-100 py-3 content"> <!--Main Col for Content-->
+
+
+
+
+            <!--            Header    Start       -->
+
+
+
+            
+            <!-- 1. Header -->
+
+            <div class="row header mb-4 ">
+                <div class="col-12">
+
+                    <div class="p-2 bg-primary rounded justify-content-between align-items-center d-flex  ">
+                        <!-- sidebar button -->
+                        <button class="show-sidebar-btn btn btn-primary d-lg-none">
+                            <i class=" feather-menu text-light" style="font-size: 2em;"></i>
+                        </button>
+                        <!-- search -->
+                        <form action="" method="POST " class="d-none d-md-block">
+                            <div class=" form-inline">
+                                <input type="text" class="form-control mr-3">
+                                <button class="btn btn-light  ">
+                                    <i class="feather-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/user/avatar1.jpg" class="user-img shadow-sm" alt="">  Krypton
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">LogOut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+          <!--            Header      End     -->
+
+
+            
+<!--                content Area Start                -->
+
+
+
+
+
+            
+            <!--           content Area End          -->
+
+
+        </div>
+    </div>
+
+
+
+</section>
+<script src="vendor/jquery.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="js/app.js"></script>
+<script src="vendor/chart_js/Chart.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="vendor/way_point/jquery.waypoints.js"></script>
+<script src="vendor/counter_up/counter_up.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

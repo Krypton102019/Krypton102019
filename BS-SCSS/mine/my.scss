@@ -1,0 +1,11 @@
+// Change COlor
+$theme-colors: (
+
+  "primary": pink,
+  "danger": skyblue
+);
+// Border change
+$border-radius:10px;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

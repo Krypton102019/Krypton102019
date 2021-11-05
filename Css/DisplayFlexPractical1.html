@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex_Practical1</title>
+<style>
+*{
+padding: 0%;
+margin: 0%;
+box-sizing: border-box;
+
+}
+/* for Section one */
+.bg-grey
+{background-color: grey;}
+.bg-sky
+{background-color: skyblue;}
+.bg-orange
+{background-color: orangered;}
+
+.one{
+    height: 50vh;
+background-color: #f5f5f5;
+display: flex;}
+.part{
+    flex-grow: 1;
+}
+.right{display: flex;
+    justify-content: center;
+    align-items: center;}
+
+/* For Section two */
+    .two{display: flex;
+        margin: auto;
+width: 960px;
+justify-content: space-between;}
+
+
+.two-part{text-align: center;
+width: 300px;
+background-color: pink;
+    margin-top: -75px;
+    box-shadow: 0 0 25px #fff;}
+</style>
+
+
+</head>
+<body>
+    <section class="one">
+        <div class="part left bg-grey"></div>
+        <div class="part right bg-sky">
+            <div class="" style="width: 300px;">
+                <h1>This is Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, voluptatibus accusamus! Nam, nobis! Excepturi, maiores vitae nisi autem voluptas, deleniti sint deserunt ipsa quis inventore dolore quas eaque perspiciatis nostrum.</p>
+            </div>
+        </div>
+    </section>
+<section class="two">
+    <div class="two-part">
+        <h1>This is one</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sunt eos nulla non numquam id aliquam et porro exercitationem dignissimos voluptatem incidunt aspernatur veritatis, similique minus. Unde iste consequatur repellendus?</p>
+    </div>
+    <div class="two-part">
+        <h1>This is Two</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam in delectus provident iusto consequatur fugit error repudiandae, accusantium quis laudantium, nulla maxime eligendi sint doloremque magnam voluptas rerum deleniti nihil!</p>
+    </div>
+    <div class="two-part">
+        <h1>This is Three</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quaerat dolorum autem odio maxime iure voluptates quidem praesentium adipisci reprehenderit, mollitia dolores ea aspernatur officiis necessitatibus eum nobis suscipit quas.</p>
+    </div>
+</section>
+<!-- For section 1 -->
+<!-- If you dont put any text ,it will display nothing. 
+To display, you must put ```flex-grow:1`` to both side-->
+</body>
+</html>
